@@ -22,11 +22,11 @@ PKG_MD5SUM:=928d882d5fc23e00f0a5fa4ebf292ab9
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
 
-define Package/softethervpn
+define Package/sevpnclient
 	SECTION:=net
 	CATEGORY:=Network
 	SUBMENU:=VPN
-	TITLE:=Open-Source Free Cross-platform Multi-protocol VPN
+	TITLE:=Open-Source Free Cross-platform Multi-protocol VPN 
 	URL:=http://www.softether.org/
 	DEPENDS:=+libpthread +librt +libreadline +libopenssl +libncurses +kmod-tun
 endef
@@ -126,9 +126,9 @@ define Package/softethervpn/install
 	ln -s vpnserver $(1)/usr/bin/vpnclient
 	ln -s vpnserver $(1)/usr/bin/vpnbridge
 	ln -s vpnserver $(1)/usr/bin/vpncmd
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rc/vpnserver $(1)/etc/init.d/softethervpnserver
+#	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rc/vpnserver $(1)/etc/init.d/softethervpnserver
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rc/vpnclient $(1)/etc/init.d/softethervpnclient
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rc/vpnbridge $(1)/etc/init.d/softethervpnbridge
+#	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rc/vpnbridge $(1)/etc/init.d/softethervpnbridge
 endef
 
 #define Package/softethervpnclient/install
