@@ -32,9 +32,9 @@ define Package/sevpnclient
 endef
 
 define Package/softethervpn/conffiles
-	/usr/bin/vpn_bridge.config
+#	/usr/bin/vpn_bridge.config
 	/usr/bin/vpn_client.config
-	/usr/bin/vpn_server.config
+#	/usr/bin/vpn_server.config
 endef
 
 #define Package/softethervpnclient
@@ -124,7 +124,7 @@ define Package/softethervpn/install
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bin/vpnserver/* $(1)/usr/bin
 	ln -s vpnserver $(1)/usr/bin/vpnclient
-	ln -s vpnserver $(1)/usr/bin/vpnbridge
+#	ln -s vpnserver $(1)/usr/bin/vpnbridge
 	ln -s vpnserver $(1)/usr/bin/vpncmd
 #	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rc/vpnserver $(1)/etc/init.d/softethervpnserver
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rc/vpnclient $(1)/etc/init.d/softethervpnclient
