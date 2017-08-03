@@ -32,9 +32,9 @@ define Package/sevpnclient
 endef
 
 define Package/softethervpn/conffiles
-#	/usr/bin/vpn_bridge.config
+	/usr/bin/vpn_bridge.config
 	/usr/bin/vpn_client.config
-#	/usr/bin/vpn_server.config
+	/usr/bin/vpn_server.config
 endef
 
 #define Package/softethervpnclient
@@ -74,10 +74,10 @@ define Build/Compile
 	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/install_src.dat
 	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/lang.config
 	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/languages.txt
-#	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/legal.txt
+	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/legal.txt
 	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/openvpn_readme.pdf
 	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/openvpn_readme.txt
-#	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/openvpn_sample.ovpn
+	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/openvpn_sample.ovpn
 #	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/root_certs.dat
 	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/SOURCES_OF_BINARY_FILES.TXT
 	rm -fr $(PKG_BUILD_DIR)/src/bin/hamcore/strtable_cn.stb
